@@ -49,11 +49,11 @@ go run main.go
 `curl http://localhost:8080/users`
 
 ### Dependencies:
-* [cors v1.3.1](github.com/gin-contrib/cors)
-* [gin v1.6.3](github.com/gin-gonic/gin)
-* [mysql v1.5.0](github.com/go-sql-driver/mysql)
-* [gorm v1.5.0](github.com/jinzhu/gorm)
-* [crypto v0.0.0-20191205180655-e7c4368fe9dd](golang.org/x/crypto)
+* [cors v1.3.1](https://github.com/gin-contrib/cors)
+* [gin v1.6.3](https://github.com/gin-gonic/gin)
+* [mysql v1.5.0](https://github.com/go-sql-driver/mysql)
+* [gorm v1.5.0](https://github.com/jinzhu/gorm)
+* [crypto v0.0.0-20191205180655-e7c4368fe9dd](https://golang.org/x/crypto)
 
 ### **License**
 The **linux-live-wallpaper** is a open-source application licensed under the [MIT License](LICENSE).
