@@ -3,13 +3,13 @@ package Schema
 import "time"
 
 type User struct {
-	Id 			uint `json:"Id"`
-	FirstName 	string `json:"FirstName" gorm:"not null"`
-	LastName 	string `json:"LastName" gorm:"not null"`
-	Email   	string `json:"Email" gorm:"unique;not null"`
-	Password   	string `json:"Password" gorm:"not null"`
-	Phone   	string `json:"Phone" gorm:"not null"`
-	Address 	*string `json:"Address"`
+	Id 			uint
+	FirstName 	string `gorm:"not null"`
+	LastName 	string `gorm:"not null"`
+	Email   	string `gorm:"unique;not null"`
+	Password   	string `gorm:"not null"`
+	Phone   	string `gorm:"not null"`
+	Address 	*string
 	CreatedAt   time.Time `sql:"DEFAULT:current_timestamp"`
 	UpdatedAt   time.Time
 }

@@ -39,6 +39,7 @@ func UserCreate(c *gin.Context) {
 		return
 	}
 
+	request.Password = Services.MD5Hash(request.Password)
 	saveErr := Models.UserCreate(&request)
 	if saveErr != nil {
 		Services.NotAcceptable(c, "Something went wrong!", saveErr)

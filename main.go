@@ -15,7 +15,14 @@ func main() {
 	}
 
 	defer Config.DB.Close()
-	Config.DB.AutoMigrate(&Schema.User{})
+
+	Config.DB.AutoMigrate(
+		&Schema.OAuthAccessToken{},
+		&Schema.OAuthClient{},
+		&Schema.OAuthRefreshToken{},
+		&Schema.User{},
+	)
+
 	r := Routes.SetupRouter()
 	_ = r.Run()
 }

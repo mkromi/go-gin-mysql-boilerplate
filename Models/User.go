@@ -41,3 +41,10 @@ func UserDelete(user *Schema.User, userId string) (err error) {
 	}
 	return nil
 }
+
+func UserFetchWithEmail(user *Schema.User, email string) (err error) {
+	if err = Config.DB.Where("email = ?", email).First(user).Error; err != nil {
+		return err
+	}
+	return nil
+}
