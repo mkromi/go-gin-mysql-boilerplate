@@ -35,3 +35,13 @@ func AuthSignin(c *gin.Context) {
 
 	Services.Success(c, "Welcome!", gin.H{"userInfo": emailUser, "tokens": tokens})
 }
+
+func AuthSignout(c *gin.Context) {
+	res := Services.Signout(strings.Split(c.Request.Header.Get("Authorization"), " ")[1])
+	if res != true {
+		Services.BadRequest(c, "Something went wrong!", nil)
+		return
+	}
+	Services.Deleted(c, "Logout Successful!", nil)
+	return
+}

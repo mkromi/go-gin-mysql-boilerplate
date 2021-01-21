@@ -93,6 +93,25 @@ func GenerateTokens(userId string, clientName string) TokenResponse {
 	return tokens
 }
 
+func Signout(token string) bool {
+	if err := Config.DB.
+		Table("o_auth_refresh_tokens").
+		Where("access_token = ?", token).
+		Update("revoked", true).
+		Error; err != nil {
+		return false
+	}
+
+	if err := Config.DB.
+		Table("o_auth_access_tokens").
+		Where("access_token = ?", token).
+		Update("revoked", true).
+		Error; err != nil {
+		return false
+	}
+	return true
+}
+
 func MD5Hash(text string) string {
 	hash := md5.Sum([]byte(text))
 	return hex.EncodeToString(hash[:])
