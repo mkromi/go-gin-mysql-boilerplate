@@ -1,7 +1,7 @@
 # go-gin-mysql-boilerplate
 > A starter project with Golang, Gin and MySQL
 
-Golang Gin boilerplate with MySQL resource. Authenticated with JWT bearer and basic authentication.
+Golang Gin boilerplate with MySQL resource. Authenticated with Bearer and Basic authentication.
 
 ### Boilerplate structure
 
