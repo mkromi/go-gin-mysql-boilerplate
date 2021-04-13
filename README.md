@@ -56,4 +56,4 @@ go run main.go
 * [crypto v0.0.0-20191205180655-e7c4368fe9dd](https://golang.org/x/crypto)
 
 ### **License**
-The **linux-live-wallpaper** is a open-source application licensed under the [MIT License](LICENSE).
+The **go-gin-mysql-boilerplate** is a open-source application licensed under the [MIT License](LICENSE).
